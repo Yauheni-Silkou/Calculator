@@ -1,0 +1,24 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        xmlns:views="clr-namespace:UI.Views"
+        xmlns:vm="clr-namespace:UI.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="1000">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF156563"/>
+                <GradientStop Color="#FF31344C" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <views:CalculatorView>
+            <views:CalculatorView.DataContext>
+                <vm:CalculatorViewModel/>
+            </views:CalculatorView.DataContext>
+        </views:CalculatorView>
+    </Grid>
+</Window>
